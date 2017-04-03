@@ -5,7 +5,8 @@ manage test automation history.
 
 Requirements
 ------------
-    - Django 1.10 or newer
+Python3
+Django 1.10 or newer
 
 How to setup developlment environment
 -------------------------------------
@@ -15,7 +16,7 @@ doesn't interfere development for current project
 Install virtualenv and take new environment to use
 ```
 $ pip install virtualenv
-$ virtualenv env
+$ virtualenv --python=python3 env
 $ source /env/bin/activate
 ```
 
