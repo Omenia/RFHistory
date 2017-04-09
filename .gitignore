@@ -90,3 +90,8 @@ ENV/
 
 # Sqlite3 database
 db.sqlite3
+
+# visual studio
+.vs
+RFHistory.pyproj
+RFHistory.sln
