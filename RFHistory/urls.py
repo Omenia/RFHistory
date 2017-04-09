@@ -17,6 +17,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'RFHistory/', include('ServerApp.urls')),
+    url(r'', include('ServerApp.urls')),
     url(r'^admin/', admin.site.urls),
 ]

@@ -28,6 +28,7 @@ $ pip install django
 To stop the current virtualenv sessions
 ```
 $ deactivate
+```
 
 Visual Studio build
 -------------------
@@ -47,3 +48,24 @@ from python environments
 - From project tab select run server
 - Goto: http://127.0.0.1:8000/RFHistory/
 - Hello message printed to browser
+
+
+Upload API
+----------
+1. HTTP Post API
+- Server accepts http Post call to url /upload
+- Robot xml file can be uploaded from front page (not yet implemented)
+- Send file using curl: "curl -F file=@file_name server_ip:server_port/upload"
+
+Send robot output file directly to a path defined in settings.py file ROBOT_OUTPUT_PATH via scp for example.
+- Server expects to receive robot output xml with unique name. Server uses uuid.uuid4 to generate unique name when using HTTP API.
+- Info file (json file) that has the status of the file parsing and name of the output file.
+Example info file 4123d203-17f5-470d-ad02-66388596ac9a.json:
+```
+{"status": "received", "output": "4123d203-17f5-470d-ad02-66388596ac9a.xml"}
+```
+Send files to server:
+```
+scp robot_results/4123d203-17f5-470d-ad02-66388596ac9a.json robot_results/4123d203-17f5-470d-ad02-66388596ac9a.xml username@remotehost:ROBOT_OUTPUT_PATH
+```
+

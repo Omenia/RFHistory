@@ -118,3 +118,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Application specific settings
+
+# Location where robot results are saved
+# Can be absoluth path or relative to where server is launched from
+ROBOT_OUTPUT_PATH = os.path.join(BASE_DIR, 'robot_results')
